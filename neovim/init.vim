@@ -169,7 +169,7 @@ Plug 'junegunn/vim-peekaboo'
 " Custom text objects creation (dependency for the latter)
 Plug 'kana/vim-textobj-user'
 " Argument text object (via, >a)
-Plug 'PeterRincker/vim-argumentative'
+"Plug 'PeterRincker/vim-argumentative'
 " Indent text object (vii)
 Plug 'kana/vim-textobj-indent'
 " Line text object (vil)
@@ -248,7 +248,7 @@ set cmdheight=1                             " Command line height
 set pumheight=10                            " Completion window max size
 set noswapfile                              " New buffers will be loaded without creating a swapfile
 set hidden                                  " Enables to switch between unsaved buffers and keep undo history
-set clipboard+=unnamed                      " Allow to use system clipboard
+set clipboard+=unnamedplus                  " Allow to use system clipboard
 set lazyredraw                              " Don't redraw while executing macros (better performance)
 set showmatch                               " Show matching brackets when text indicator is over them
 set matchtime=2                             " How many tenths of a second to blink when matching brackets
@@ -344,7 +344,7 @@ set wildignore+=tmp/**
 if has('nvim')
   let g:loaded_python_provider=1                        " Disable python 2 interface
   let g:python_host_skip_check=1                        " Skip python 2 host check
-  let g:python3_host_prog='/usr/local/bin/python3'      " Set python 3 host program
+  let g:python3_host_prog='/usr/bin/python3'      " Set python 3 host program
   set inccommand=nosplit                                " Live preview of substitutes and other similar commands
 endif
 "}}}
@@ -924,16 +924,16 @@ nmap ]] <Plug>Markdown_MoveToNextHeader
 " -----------------------------------------------------
 " 5.7 Argumentative (use a instead of ,) {{{
 " -----------------------------------------------------
-xmap ia <Plug>Argumentative_InnerTextObject
-xmap aa <Plug>Argumentative_OuterTextObject
-omap ia <Plug>Argumentative_OpPendingInnerTextObject
-omap aa <Plug>Argumentative_OpPendingOuterTextObject
-nmap [a <Plug>Argumentative_Prev
-nmap ]a <Plug>Argumentative_Next
-xmap [a <Plug>Argumentative_XPrev
-xmap ]a <Plug>Argumentative_XNext
-nmap <a <Plug>Argumentative_MoveLeft
-nmap >a <Plug>Argumentative_MoveRight
+"xmap ia <Plug>Argumentative_InnerTextObject
+"xmap aa <Plug>Argumentative_OuterTextObject
+"omap ia <Plug>Argumentative_OpPendingInnerTextObject
+"omap aa <Plug>Argumentative_OpPendingOuterTextObject
+"nmap [a <Plug>Argumentative_Prev
+"nmap ]a <Plug>Argumentative_Next
+"xmap [a <Plug>Argumentative_XPrev
+"xmap ]a <Plug>Argumentative_XNext
+"nmap <a <Plug>Argumentative_MoveLeft
+"nmap >a <Plug>Argumentative_MoveRight
 "}}}
 
 " -----------------------------------------------------

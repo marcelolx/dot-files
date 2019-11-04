@@ -1,6 +1,6 @@
 [user]
-    name = Martin Toma
-    email = martin.toma.svk@gmail.com
+    name = Marcelo Lauxen
+    email = marcelolauxen16@gmail.com
 [credential]
     helper = cache --timeout=3600
 [core]
@@ -19,6 +19,7 @@
     di = diff
     ds = diff --staged
     dt = difftool --no-prompt
+    cmt = commit -m $1
     ci = commit --verbose
     cim = commit --verbose --reedit-message=HEAD --reset-author
     amend = commit --amend --verbose
@@ -30,6 +31,7 @@
     pod = push origin develop
     pbd = push backup develop
     rb = rebase -i HEAD~10
+    s = status
     st = status -sb
     br = branch
     lo = log --oneline -n 15
@@ -42,7 +44,7 @@
     unstage = reset HEAD --
     edit = "!nvim `git ls-files -m`"
 [github]
-    user = martin-svk
+    user = marcelolx
 [branch]
     autosetuprebase = always
 [diff]
