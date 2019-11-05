@@ -19,12 +19,13 @@
     di = diff
     ds = diff --staged
     dt = difftool --no-prompt
-    cmt = commit -m $1
+    cmt = commit -m
     ci = commit --verbose
     cim = commit --verbose --reedit-message=HEAD --reset-author
     amend = commit --amend --verbose
     co = checkout
     pl = pull
+    p = push origin 
     ps = push
     pom = push origin master
     pbm = push backup master

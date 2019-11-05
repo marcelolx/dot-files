@@ -133,7 +133,7 @@ Plug 'ap/vim-buftabline'
 " ---------------------------------------------------------------------------------------------------------------------
 
 " Fuzzy searching/replacing/etc
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug '/.fzf/bin/fzf' | Plug 'junegunn/fzf.vim'
 " Ag wrapper search and edit
 Plug 'dyng/ctrlsf.vim', { 'on': ['CtrlSF', 'CtrlSFToggle'] }
 " Git swiss-army knife
@@ -167,21 +167,21 @@ Plug 'junegunn/vim-peekaboo'
 " ---------------------------------------------------------------------------------------------------------------------
 
 " Custom text objects creation (dependency for the latter)
-Plug 'kana/vim-textobj-user'
+"Plug 'kana/vim-textobj-user'
 " Argument text object (via, >a)
 "Plug 'PeterRincker/vim-argumentative'
 " Indent text object (vii)
-Plug 'kana/vim-textobj-indent'
+"Plug 'kana/vim-textobj-indent'
 " Line text object (vil)
-Plug 'kana/vim-textobj-line'
+"Plug 'kana/vim-textobj-line'
 " Entire buffer text object (vae)
-Plug 'kana/vim-textobj-entire'
+"Plug 'kana/vim-textobj-entire'
 " Comment text object (vac)
-Plug 'glts/vim-textobj-comment'
+"Plug 'glts/vim-textobj-comment'
 " XML attribute
-Plug 'whatyouhide/vim-textobj-xmlattr'
+"Plug 'whatyouhide/vim-textobj-xmlattr'
 " Improved targets line cin) next parens
-Plug 'wellle/targets.vim'
+"Plug 'wellle/targets.vim'
 "}}}
 
 " ---------------------------------------------------------------------------------------------------------------------
@@ -198,6 +198,8 @@ Plug 'tomasr/molokai'
 Plug 'cocopon/iceberg.vim'
 " Tender
 Plug 'jacoborus/tender.vim'
+" Onedark
+Plug 'joshdick/onedark.vim'
 "}}}
 
 " ---------------------------------------------------------------------------------------------------------------------
@@ -207,21 +209,21 @@ Plug 'jacoborus/tender.vim'
 " Easily expand selected region
 Plug 'terryma/vim-expand-region'
 " Search for highlighted word with *
-Plug 'thinca/vim-visualstar'
+"Plug 'thinca/vim-visualstar'
 " Improve star by not jumping immediately
-Plug 'ironhouzi/vim-stim'
+"Plug 'ironhouzi/vim-stim'
 " Intelligent buffer closing
-Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
+"Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 " Iabbrev auto-correction library
-Plug 'chip/vim-fat-finger'
+"Plug 'chip/vim-fat-finger'
 " Matchit enhances jump motions
-Plug 'tmhedberg/matchit'
+"Plug 'tmhedberg/matchit'
 " More . repeat functionality
-Plug 'tpope/vim-repeat'
+"Plug 'tpope/vim-repeat'
 " Delete all but current buffer
-Plug 'vim-scripts/BufOnly.vim', { 'on': 'Bonly' }
+"Plug 'vim-scripts/BufOnly.vim', { 'on': 'Bonly' }
 " Did you mean file open
-Plug 'EinfachToll/DidYouMean'
+"Plug 'EinfachToll/DidYouMean'
 "}}}
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
