@@ -665,7 +665,7 @@ let g:fzf_layout = { 'window': 'enew' }
 " 4.3 NERDTree {{{
 " -----------------------------------------------------
 let g:NERDTreeMinimalUI=1
-let g:NERDTreeWinSize=60
+let g:NERDTreeWinSize=30
 let g:NERDTreeAutoDeleteBuffer=1
 let g:NERDTreeShowHidden=1
 let g:NERDTreeHighlightCursorline=0
