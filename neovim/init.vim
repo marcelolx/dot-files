@@ -134,6 +134,8 @@ Plug 'ap/vim-buftabline'
 
 " Fuzzy searching/replacing/etc
 Plug '/.fzf/bin/fzf' | Plug 'junegunn/fzf.vim'
+" Ctrl P
+Plug 'ctrlpvim/ctrlp.vim'
 " Ag wrapper search and edit
 Plug 'dyng/ctrlsf.vim', { 'on': ['CtrlSF', 'CtrlSFToggle'] }
 " Git swiss-army knife
