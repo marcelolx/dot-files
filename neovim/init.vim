@@ -205,6 +205,17 @@ Plug 'joshdick/onedark.vim'
 "}}}
 
 " ---------------------------------------------------------------------------------------------------------------------
+" LSP - Language Server Protocol {{{
+" ---------------------------------------------------------------------------------------------------------------------
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+"}}}
+
+" ---------------------------------------------------------------------------------------------------------------------
 " Other {{{
 " ---------------------------------------------------------------------------------------------------------------------
 
@@ -245,6 +256,7 @@ scriptencoding utf-8                        " Set utf-8 as default script encodi
 
 set shell=/bin/zsh                          " Setting shell to zsh
 set number                                  " Line numbers on
+set relativenumber                          " Relative numbers on
 set showmode                                " Always show mode
 set showcmd                                 " Show commands as you type them
 set textwidth=120                           " Text width is 120 characters
@@ -1131,6 +1143,24 @@ augroup linters
   " pip3 install vim-vint
   autocmd BufWritePost *.vim Neomake vint
 augroup END
+"}}}
+
+" -----------------------------------------------------
+" 7.1 LSP - Language Server Protocol configuration {{{
+" -----------------------------------------------------
+
+" Required for operations modifying multiple buffers like rename.
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
+    \ }
+
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 "}}}
 
 "}}}
