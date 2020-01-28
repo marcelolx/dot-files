@@ -42,6 +42,7 @@ install_nvim_folder() {
   ln -sf $current_path/neovim/spell/dictionary.utf-8.add ~/.config/nvim/dictionary.utf-8.add
   ln -sf $current_path/neovim/UltiSnips ~/.config/nvim/UltiSnips
   ln -sf $current_path/neovim/init.vim ~/.config/nvim/init.vim
+  ln -sf $current_path/neovim/autoload/utils.vim ~/.config/nvim/autoload/utils.vim
 }
 
 #-----------------------------------------------------
@@ -257,7 +258,7 @@ if command_exists rubocop; then
   ln -sf $current_path/linters/rubocop.yml ~/dev/.rubocop.yml
 else
   echo "   Installing rubocop!"
-  gem install rubocop
+  gem install rubocop rubocop-rails rubocop-performance rubocop-rspec
   ln -sf $current_path/linters/rubocop.yml ~/dev/.rubocop.yml
 fi
 

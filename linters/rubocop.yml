@@ -1,40 +1,33 @@
 # gem install rubocop
 # gem install rubocop-rails
 # gem install rubocop-rspec
-# require: rubocop-rspec
+require: 
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
 
-Documentation:
+Style/Documentation:
   Enabled: false
-Metrics/LineLength:
+
+Layout/LineLength:
   Max: 120
+
 Layout/MultilineOperationIndentation:
-# Style/MultilineOperationIndentation:
   EnforcedStyle: indented
+
 Style/FrozenStringLiteralComment:
   Enabled: false
+
 Rails:
   Enabled: true
+
 AllCops:
-  TargetRubyVersion: 2.3
-  Include:
-    - '**/*.gemspec'
-    - '**/*.podspec'
-    - '**/*.jbuilder'
-    - '**/*.rake'
-    - '**/*.opal'
-    - '**/config.ru'
-    - '**/Gemfile'
-    - '**/Rakefile'
-    - '**/Capfile'
-    - '**/Guardfile'
-    - '**/Podfile'
-    - '**/Thorfile'
-    - '**/Vagrantfile'
-    - '**/Berksfile'
-    - '**/Cheffile'
-    - '**/Vagabondfile'
+  TargetRubyVersion: 2.6
   Exclude:
     - 'db/**/*'
     - 'config/**/*'
     - 'script/**/*'
     - 'vendor/**/*'
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
