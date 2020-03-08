@@ -45,6 +45,7 @@
     unstage = reset HEAD --
     edit = "!nvim `git ls-files -m`"
     cfp = !git checkout $1 && git fetch origin $1 && git pull origin $1 && :
+    cb = checkout -b
 [github]
     user = marcelolx
 [branch]
